@@ -14,7 +14,7 @@
 
 // Getting the Random Number
 const number = Math.trunc(Math.random()*20)+1;
-document.querySelector('.number').textContent = number;
+
 
 let score = 20;
 
@@ -31,6 +31,38 @@ document.querySelector('.check').addEventListener(
     } else if (guess === number) {
         document.querySelector('.message').textContent = 
         'Correct Number Selected!'
+
+        // Displaying Correct Number
+        document.querySelector('.number').textContent = number;
+
+        //Changing color of website if player wins
+
+        //Selecting class
+        document.querySelector('body').style.
+        backgroundColor = "#60b347";
+
+        document.querySelector('.number').style.
+        width = "30rem";
+
+        document.querySelector('.again').textContent
+        = "Reset Game"
+
+        //Reset Button Click Event
+
+        document.querySelector('.again').addEventListener(
+            'click',
+            function() {
+                document.querySelector('.number').style.
+                width = '15rem';
+
+                document.querySelector('.guess').textContent
+                = '';
+                
+            }
+        )
+
+
+
         // Number is greater than number    
     } else if (guess > number) {
         if(score > 0) {
@@ -57,3 +89,5 @@ document.querySelector('.check').addEventListener(
     }
     }
 )
+
+
