@@ -76,6 +76,9 @@ document.querySelector('.check').addEventListener(
                 // Resetting Message
                 document.querySelector('.message').textContent
                 = "Start Guessing"
+
+                document.querySelector('.again').textContent
+                = "Again"
             }
         )
 
