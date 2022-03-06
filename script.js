@@ -52,12 +52,30 @@ document.querySelector('.check').addEventListener(
         document.querySelector('.again').addEventListener(
             'click',
             function() {
+                score = 20
+
+                //Number Width
                 document.querySelector('.number').style.
                 width = '15rem';
-
-                document.querySelector('.guess').textContent
-                = '';
                 
+                //Input box
+                document.querySelector('.guess').value = '';
+
+                // Number Box
+                document.querySelector('.number').textContent
+                = '?';
+                
+                // Color of Page
+                document.querySelector('body').style.
+                backgroundColor = "#222";
+
+                // Reseting Score
+                document.querySelector('.score').textContent 
+                = score;
+
+                // Resetting Message
+                document.querySelector('.message').textContent
+                = "Start Guessing"
             }
         )
 
