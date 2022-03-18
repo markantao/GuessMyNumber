@@ -17,6 +17,7 @@ const number = Math.trunc(Math.random()*20)+1;
 
 
 let score = 20;
+let highScore = 0;
 
 document.querySelector('.check').addEventListener(
     'click',
@@ -46,6 +47,12 @@ document.querySelector('.check').addEventListener(
 
         document.querySelector('.again').textContent
         = "Reset Game"
+
+        if(score > highScore) {
+            highScore = score;
+            document.querySelector('.highscore').textContent
+            = highScore;
+        }
 
         //Reset Button Click Event
 
